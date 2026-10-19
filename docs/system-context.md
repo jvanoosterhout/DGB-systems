@@ -40,7 +40,7 @@ The original goals of HMD-DGB: home automation that is affordable, understandabl
 
 - **Cost-effective automation:** get started without paying for a gateway whose cost is disproportionate to the functions it provides. 
 
-    A gateway above EUR 200 is unlikely to be adopted. Though Somfy and Powerview gateways were considered in relation to how many devices they could serve. For a single device that already has a basic physical interface, a custom local controller may be more economical. Cost, coverage and available functionality all matter.
+    A gateway above EUR 200 is unlikely to be adopted. Though, gateways were considered and purchased in relation to how many devices they could serve. Examples are window coverings, screens, lights and radiator valves. For a single device that already has a basic physical interface, a custom local controller may be more economical. Cost, coverage and available functionality all matter.
 
 - **Minimize power consumption:** Use few as posible energy by gateways and controller nodes. 
 
@@ -60,6 +60,14 @@ These are personal development goals and needs, not recurring needs of the syste
 - 2023: learn how to unify connectivity and control across different use cases rather than maintain one custom backend per controller.
 - 2025: learn more about Systems Engineering, documentation and extending compatibility.
 - 2026: experiment with GitHub Copilot as a coding assistant.
+
+### 7. Personal network preference 
+
+The network argitecture shall limit connectivity of controllers to users and eachother. To this end the home network shall be split into at least a users network and IOT network. IOT devices should only be able to comunicate with the central system (Home Assistant) and potentially the maintainer. All users should be able to connect to Home Assistant. Additionally, my personal network contains an IOT-internet-only network, basically a guest network, for devices that can only talk via the cloud. As such I feel they should not have rigths to interact with any other device. 
+
+### History
+
+- 2026-10-08: Drafted from the user's preference
 
 ## Controller-specific examples of needs
 

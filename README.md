@@ -4,6 +4,17 @@ DGB-systems connects the generic [HMD-DGB](https://github.com/jvanoosterhout/HMD
 
 This DGB-systems repository covers system-wide, software and controller concerns. Technical details stay with the implementation repositories; records link back to this repository instead of duplicating them. It aims to learn and practice Systems Enginering skills. 
 
+# Definitions
+
+These are frequently used definition throughout the DGB-systems. 
+
+- DGB-system: Components involved in the DGB eco system. These consist of controllers equiped with SBC hardware nodes running the HMD-DGB service.
+- HMD-DGB: Main software component within the DGB-system. When it runs it makes the service. Sometimes also called the service of just DGB. 
+- Node: The Single Board Computer (SBC) that runs the HMD-DGB service within the DGB-system
+- Service: The HMD-DGB software that runs on the node and handels al device and pin bindings through the HMD-DGB software.
+- Controller: The combined piece of hardware being able to perform actual action and measurments at the intended location. The hardware can include SBC, relays, sensors, connectors and many more components. 
+- Central home automation platform: a platform or service to connects all the users smart home systems in one place. This central system could be e.g. Homey or Domotics, but by Design Decision ### [NEEDS REF] Home Assistant was chosen. 
+
 ## Components
 
 | Project | Role |
