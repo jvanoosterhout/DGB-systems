@@ -222,3 +222,12 @@ Description: The software shall be structured so that supported behavior can be 
 
 - 2026-10-08: Drafted from the needs.
 
+## SW-REQ-014: The software MTBF shall be at least 31 days. 
+
+Status: draft  
+Applies to: HMD-DGB
+Description: The software shall not crash or restart unintendedly during at least 31 days. 
+
+### History
+
+- 2026-10-19: Drafted from the needs.
