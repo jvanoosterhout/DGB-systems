@@ -1,6 +1,6 @@
 # Requirements
 
-These are selected requirements derived from the [system needs](system-context.md#needs-and-motivation). They describe desired behavior, not a feature catalogue. Preferences such as affordability, low power use and approachable setup remain needs until a useful, agreed acceptance boundary exists. All requirements below are drafts; implementation or verification is not implied.
+These are selected requirements derived from the [system needs](system-context.md#needs-and-motivation). They describe desired behaviour, not a feature catalogue. Preferences such as affordability, low power use and approachable setup remain needs until a useful, agreed acceptance boundary exists. All requirements below are drafts; implementation or verification is not implied.
 
 # DGB-system requirements
 
@@ -45,15 +45,15 @@ Description: Essential local device control shall remain available without a ven
 
 - 2026-10-08: Drafted from the user's local-first preference; no availability criterion or device-specific exception has been agreed.
 
-## SYS-REQ-005: Defined behavior for startup and failed configuration
+## SYS-REQ-005: Defined behaviour for startup and failed configuration
 
 Status: draft  
 Applies to: HMD-DGB 
-Description: Before bindings become active, startup behavior for configured devices and outputs shall be defined. The user shall be able to chose from a list of startup behaviors. An incomplete or rejected configuration cycle shall not be treated as live and handel akkording to the startup behavior. Each physical controller shall separatly define the appropriate physical design for its own restart and failure conditions.
+Description: Before bindings become active, startup behaviour for configured devices and outputs shall be defined. The user shall be able to chose from a list of startup behaviour. An incomplete or rejected configuration cycle shall not be treated as live and handle according to the startup behaviour. Each physical controller shall separately define the appropriate physical design for its own restart and failure conditions.
 
 ### History
 
-- 2026-10-08: Drafted from the need for explicit startup and failure behavior; intended physical states remain controller-specific.
+- 2026-10-08: Drafted from the need for explicit startup and failure behaviour; intended physical states remain controller-specific.
 
 # Hardware requirements
 
@@ -67,7 +67,7 @@ Description: Custom controllers shall be constructed with components from a sele
 
 - 2026-10-08: Drafted from the needs.
 
-## HW-REQ-002: Each node shall use as little as posible power
+## HW-REQ-002: Each node shall use as little as possible power
 
 Status: draft  
 Applies to: Node and HMD-DGB
@@ -79,9 +79,9 @@ Description: Each node shall be configured such that power consumption is minimi
 
 - 2023: power consumption on a pi 4 with Poe is an enormous 6w. Poe and main Pi boards where abandoned for that reason. Pi zero boards were considered instead.  
 
-## HW-REQ-003: Controllers shall be or use trustwordy components. 
+## HW-REQ-003: Controllers shall be or use trustworthy components. 
 
-Custom-built controllers (and personally this also holds for commercial gateways) shall use components with documented specifications, an identifiable supplier or source and can be at least assumed to have a reasonable lifespane with support. Any component with uncertain support or lifespane shall be called out in the controller documentation.
+Custom-built controllers (and personally this also holds for commercial gateways) shall use components with documented specifications, an identifiable supplier or source and can be at least assumed to have a reasonable lifespan with support. Any component with uncertain support or lifespan shall be called out in the controller documentation.
 
 ### History
 
@@ -93,7 +93,7 @@ Custom-built controllers (and personally this also holds for commercial gateways
 
 Status: draft  
 Applies to: HMD-DGB
-Description: A user shall be able to configure GPIO as inputs or sensors given a predefined set of configuration capabilities. A minimum set consists of a binary sensor and a counter. Preferably these are extended by common GPIO sensors with a variaty of protocols. The configuration will be stored on, and send from, the central home automation platform, like in SYS-REQ-002. 
+Description: A user shall be able to configure GPIO as inputs or sensors given a predefined set of configuration capabilities. A minimum set consists of a binary sensor and a counter. Preferably these are extended by common GPIO sensors with a variety of protocols. The configuration will be stored on, and send from, the central home automation platform, like in SYS-REQ-002. 
 
 ### History
 
@@ -149,7 +149,7 @@ Description: The binding shall execute a configured action only when the require
 
 - 2026-10-08: Drafted from the needs.
 
-## SW-REQ-007: Thired party packages shall be reasonably trustwordy, maintained and have a good documentation and/or active comunity 
+## SW-REQ-007: Third party packages shall be reasonably trustworthy, maintained and have a good documentation and/or active community 
 
 Status: draft  
 Applies to: Controllers
@@ -165,7 +165,7 @@ Status: draft
 Applies to: HMD-DGB
 Description: A user shall be able to request a service restart on a node from a central platform. The node shall report or expose whether it returned to operation. There shall be an options to: 
 - Restart
-- Restart and clear all exposed deviced on the home automation platform, 
+- Restart and clear all exposed devices on the home automation platform, 
 - Restart and clear all configurations and all exposed content. 
 
 ### History
@@ -176,17 +176,17 @@ Description: A user shall be able to request a service restart on a node from a 
 
 Status: draft  
 Applies to: Controllers
-Description: A rejected or invalid configuration or a bug in catching these, shall not prevent the service's essential functions from operating. This means that the the Node and Service device in the central home automation platform remain functional. 
+Description: A rejected or invalid configuration or a bug in catching these, shall not prevent the service's essential functions from operating. This means that the Node and Service device in the central home automation platform remain functional. 
 
 ### History
 
 - 2026-10-08: Drafted from the needs.
 
-## SW-REQ-010: The service switchs to safe mode at connectivity failure 
+## SW-REQ-010: The service switches to safe mode at connectivity failure 
 
 Status: draft  
 Applies to: Controllers
-Description: When a node loses its connection to the central home automation platform, it shall apply a user specified fallback behavior for each affected output. The user can configure this fallback behavior from a list of configuration options. 
+Description: When a node loses its connection to the central home automation platform, it shall apply a user specified fallback behaviour for each affected output. The user can configure this fallback behaviour from a list of configuration options. 
 
 ### History
 
@@ -196,7 +196,7 @@ Description: When a node loses its connection to the central home automation pla
 
 Status: draft  
 Applies to: HMD-DGB
-Description: A user shall be able to install and provision a node by following one documented procedure that identifies required manual steps, prerequisites and required configuration. "Minimal" means maximally these main steps: install the controler OS and install/configure HMD-DGB with controller specific parameters.
+Description: A user shall be able to install and provision a node by following one documented procedure that identifies required manual steps, prerequisites and required configuration. "Minimal" means maximally these main steps: install the controller OS and install/configure HMD-DGB with controller specific parameters.
 
 ### History
 
@@ -212,21 +212,24 @@ Description: A user shall be able to initiate a HMD-DGB software update from the
 
 - 2026-10-08: Drafted from the needs.
 
-## SW-REQ-013: The software shall be structured such that it supports human redability, human understandability and automated unit and integration testing. 
+## SW-REQ-013: The software shall be structured such that it supports human readability, human understandability and automated unit and integration testing. 
 
 Status: draft  
 Applies to: HMD-DGB
-Description: The software shall be structured so that supported behavior can be understood easily, and automated unit and integration tests can exercise its functioning easily. 
+Description: The software shall be structured so that supported behaviour can be understood easily, and automated unit, smoke and integration tests can exercise its functioning easily. 
+- Unit tests shall cover 100% of the code. 
+- Smoke tests shall cover default HMD-DGB configuration with broker and a basic configuration like the[MQTT_duration_run](https://github.com/jvanoosterhout/HMD-DGB/blob/main/Examples/venv_MQTT_project/MQTT_duration_run.py) example. 
+- Integration tests shall cover each module and modules with the core. 
 
 ### History
 
 - 2026-10-08: Drafted from the needs.
 
-## SW-REQ-014: The software MTBF shall be at least 31 days. 
+## SW-REQ-014: The software shall be able to work for at least 31 days. 
 
 Status: draft  
 Applies to: HMD-DGB
-Description: The software shall not crash or restart unintendedly during at least 31 days. 
+Description: The software shall not crash or restart unintendedly during at least 31 days under normal operations with hourly interaction. 
 
 ### History
 

@@ -2,18 +2,18 @@
 
 DGB-systems connects the generic [HMD-DGB](https://github.com/jvanoosterhout/HMD-DGB) software platform with separately maintained physical nodes. It documents the family-wide context, architecture and design history; the software and hardware implementations remain in their own repositories.
 
-This DGB-systems repository covers system-wide, software and controller concerns. Technical details stay with the implementation repositories; records link back to this repository instead of duplicating them. It aims to learn and practice Systems Enginering skills. 
+This DGB-systems repository covers system-wide, software and controller concerns. Technical details stay with the implementation repositories; records link back to this repository instead of duplicating them. It aims to learn and practice Systems Engineering skills. 
 
 # Definitions
 
 These are frequently used definition throughout the DGB-systems. 
 
-- DGB-system: Components involved in the DGB eco system. These consist of controllers equiped with SBC hardware nodes running the HMD-DGB service.
-- HMD-DGB: Main software component within the DGB-system. When it runs it makes the service. Sometimes also called the service of just DGB. 
+- DGB-system: Components involved in the DGB eco system. These consist of controllers equipped with SBC hardware nodes running the HMD-DGB service.
+- HMD-DGB: Main software component within the DGB-system. When it runs it makes the DGB-service. Sometimes also called just DGB. 
 - Node: The Single Board Computer (SBC) that runs the HMD-DGB service within the DGB-system
-- Service: The HMD-DGB software that runs on the node and handels al device and pin bindings through the HMD-DGB software.
-- Controller: The combined piece of hardware being able to perform actual action and measurments at the intended location. The hardware can include SBC, relays, sensors, connectors and many more components. 
-- Central home automation platform: a platform or service to connects all the users smart home systems in one place. This central system could be e.g. Homey or Domotics, but by Design Decision ### [NEEDS REF] Home Assistant was chosen. 
+- Service: The HMD-DGB software that runs on the node and handles al device and pin bindings through the HMD-DGB software.
+- Controller: The combined piece of hardware being able to perform actual action and measurements at the intended location. The hardware can include SBC, relays, sensors, connectors and many more components. 
+- Central home automation platform: a platform or service to connects all the users smart home systems in one place. This central system could have been e.g. [Homey](https://homey.app/en-gb/) or [Domoticz](https://www.domoticz.com/), but by Design Decision [SYS-DD-001](docs/design-decisions.md) Home Assistant was chosen. 
 
 ## Components
 

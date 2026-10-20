@@ -2,7 +2,7 @@
 
 ## Needs and motivation
 
-The original goals of HMD-DGB: home automation that is affordable, understandable, trustworthy and maintainable over years, with as few separate systems to integrate as practical. The goal changed and expaned over the years. This system context document descripes these goals as the user needs related Systems Enginering practice. 
+The original goals of HMD-DGB: home automation that is affordable, understandable, trustworthy and maintainable over years, with as few separate systems to integrate as practical. The goal changed and expanded over the years. This system context document describes these goals as the user needs related Systems Engineering practice. 
 
 ### 1. User comfort and control
 
@@ -12,7 +12,7 @@ The original goals of HMD-DGB: home automation that is affordable, understandabl
 
 - **Coherent user control:** operate varied household equipment through one familiar environment, with related entities grouped meaningfully instead of scattered across interfaces. This includes being able to configure and extend devices from that single environment; it is about the user and user experience, not software reuse by itself.
 
-    Home Assistant is the chosen environment. The configuration mechanisem was first a REST API that, with each call, would send the entire configuration for the targeted device. Currently the configuration mechanisem relays on retained MQTT messages. 
+    Home Assistant is the chosen environment. The configuration mechanism was first a REST API that, with each call, would send the entire configuration for the targeted device. Currently the configuration mechanism relays on retained MQTT messages. 
 
 - **Composite devices as one logical unit:** operate a multi-part device through meaningful controls and status rather than exposing its elementary pins. For example, a cover may combine up/down/stop commands with position sensors. This concerns the user's interaction with a complex device.
 
@@ -20,17 +20,17 @@ The original goals of HMD-DGB: home automation that is affordable, understandabl
 
 - **Local-only over semi-local and cloud connectivity:** prefer device control and data handling to work locally on (W)LAN, without depending on a vendor cloud or internet connection. Semi-local or cloud-connected features may be acceptable when their added value justifies the dependency and essential local operation remains available. 
 
-- **Limit wireless clutter:** avoid accumulating many separate wireless systems and gateways, and avoid unnecessary radio communication where a practical alternative exists. Prefere to group multiple functions in a single node and prefere to have a LAN interface. The original motivation was a concern that many wireless products would make the home feel like a "wireless mess"; this is a preference, not a measured claim about radio interference.
+- **Limit wireless clutter:** avoid accumulating many separate wireless systems and gateways, and avoid unnecessary radio communication where a practical alternative exists. Prefer to group multiple functions in a single node and prefer to have a LAN interface. The original motivation was a concern that many wireless products would make the home feel like a "wireless mess"; this is a preference, not a measured claim about radio interference.
 
 ### 3. Continuity, trust and maintainability
 
 - **Long-term support:** rely on hardware and software that are likely to remain supported, preferably with an active community. Prefer support over many years, potentially a decade.
 
-- **Maintainability:** Have a clean and logical software argitecture with unit and intergartion tests. Avoid duplicated custom backends. 
+- **Maintainability:** Have a clean and logical software architecture with unit and integration tests. Avoid duplicated custom backends. 
 
 - **Recoverable controller nodes:** replace a failed Pi or SD card and restore the node without manually reloading its controller configuration. It should be as simple as writing an SD card, power on, (configure its IP address,) install HMD-DGB, then manage configuration and updates from Home Assistant. 
 
-- **Predictable behavior during interruption:** know what outputs and devices do during and after restart, configuration failure or communication loss, especially where physical equipment is affected. 
+- **Predictable behaviour during interruption:** know what outputs and devices do during and after restart, configuration failure or communication loss, especially where physical equipment is affected. 
 
 - **Trusted technology:** understand where data goes, whether a device can be used locally, and whether its software and support are likely to last. 
 
@@ -42,9 +42,9 @@ The original goals of HMD-DGB: home automation that is affordable, understandabl
 
     A gateway above EUR 200 is unlikely to be adopted. Though, gateways were considered and purchased in relation to how many devices they could serve. Examples are window coverings, screens, lights and radiator valves. For a single device that already has a basic physical interface, a custom local controller may be more economical. Cost, coverage and available functionality all matter.
 
-- **Minimize power consumption:** Use few as posible energy by gateways and controller nodes. 
+- **Minimize power consumption:** Use few as possible energy by gateways and controller nodes. 
 
-    An earlier belief that wired Ethernet, especially PoE, would use less power because it needed fewer power adapters was later rejected. An earliere MV controller was build on a Raspberry Pi 4 with Poe and used 6 W, This motivated to switching to a Pi Zero 2 W using 1-2W. 
+    An earlier belief that wired Ethernet, especially PoE, would use less power because it needed fewer power adapters was later rejected. An earlier MV controller was build on a Raspberry Pi 4 with Poe and used 6 W, This motivated to switching to a Pi Zero 2 W using 1-2W. 
 
 ### 5. Physical integration and construction
 
@@ -63,7 +63,7 @@ These are personal development goals and needs, not recurring needs of the syste
 
 ### 7. Personal network preference 
 
-The network argitecture shall limit connectivity of controllers to users and eachother. To this end the home network shall be split into at least a users network and IOT network. IOT devices should only be able to comunicate with the central system (Home Assistant) and potentially the maintainer. All users should be able to connect to Home Assistant. Additionally, my personal network contains an IOT-internet-only network, basically a guest network, for devices that can only talk via the cloud. As such I feel they should not have rigths to interact with any other device. 
+A personal need, that does not apply to the DGB-Systems, but may be useful to know. The network architecture shall limit connectivity of controllers to users and each other. To this end the home network shall be split into at least a users network and IOT network. IOT devices should only be able to communicate with the central system (Home Assistant) and potentially the maintainer. All users should be able to connect to Home Assistant. Additionally, my personal network contains an IOT-internet-only network, basically a guest network, for devices that can only talk via the cloud. As such I feel they should not have rights to interact with any other device. 
 
 ### History
 
