@@ -45,7 +45,7 @@ Home Assistant provides the user-facing entities and automations. HMD-DGB runs o
 - [Documentation map](docs/README.md)
 - [Needs and motivation](docs/system-context.md#needs-and-motivation)
 - [Requirements](docs/requirements.md), [design decisions](docs/design-decisions.md) and [design attempts](docs/design-attempts.md)
-- [Project history notes](braindump.md) and [documentation migration instructions](instructions.md)
+- [Documentation and record-maintenance instructions](instructions.md)
 
 ## Status
 
